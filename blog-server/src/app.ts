@@ -7,10 +7,10 @@ const app = new Koa();
 const router = new Router();
 const bodyParser = require('koa-bodyparser');
 
-const {queryUser, addUser}= require('./db/controllers/user');
+const {queryUser, addUser, userLogin}= require('./db/controllers/user');
 
 router.get('/', queryUser);
-router.post('/addUser', addUser);
+router.post('/api/userLogin', userLogin);
 
 app.use(bodyParser());
 app.use(cors());

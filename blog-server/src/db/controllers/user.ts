@@ -28,8 +28,13 @@ const addUser = async (ctx :any, next :any )=>{
       }   });
    console.log( 'user', user)
 };
-
+const userLogin = async (ctx :any, next :any ) =>{
+   console.log(ctx.request.body);
+   ctx.status = 200;
+   ctx.message='ewdsfd'
+};
 module .exports = {
    queryUser,
-   addUser
+   addUser,
+   userLogin
 };
